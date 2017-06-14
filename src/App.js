@@ -20,8 +20,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Editor input={this.state.input} onInputChange={this.onInputChange} />
-        <Result input={this.state.input} />
+        <div className="flex-container">
+          <Editor input={this.state.input} onInputChange={this.onInputChange} />
+          <Result input={this.state.input} />
+        </div>
         <Footer />
       </div>
     )
@@ -32,7 +34,7 @@ function Header (){
   return (
     <div id="Header">
       <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
+      <h2>MarkDown Viewer with React</h2>
     </div>
   )
 }
@@ -48,7 +50,6 @@ class Editor extends Component {
 }
 
 class Result extends Component {
-
 
   render() {
     return (
