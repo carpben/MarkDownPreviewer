@@ -45,7 +45,7 @@ class Editor extends Component {
   render() {
     return (
       <section className="editor">
-          <h3>MarkDown Editor - What's on your mind?</h3>
+          <h3>What's on your mind?</h3>
         <textarea value={this.props.input} onChange={this.props.onInputChange}/>
     </section>
     )
@@ -57,7 +57,7 @@ class View extends Component {
   render() {
     return (
         <section className="view">
-            <h3>View</h3>
+            <h3>View Markdown</h3>
             <div id="Result" dangerouslySetInnerHTML={{__html: marked(this.props.input)}} />
         </section>
     )
@@ -77,7 +77,7 @@ class Result extends Component {
     render (){
         return  (
         <section className="markdown">
-            <button onClick={this.handleButtonClick} >Show markdown</button>
+            <button className="btn btn-lg" onClick={this.handleButtonClick} >Show markdown</button>
             {this.state.showMarkdown? <MarkdownArea /> : <div>hello world</div>  }
         </section>
     )

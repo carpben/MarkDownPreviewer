@@ -1,66 +1,66 @@
 .App {
-  text-align: center;
+    text-align: center;
+
 }
 
 header {
-  /*position: relative;*/
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+	background-color: #222;
+	height: 150px;
+	padding: 20px;
+	color: white;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
 .container {
-  position: relative;
-  width: 1000px;
-  height: 600px;
-  border: solid 1px black;
-  margin: auto;
-  padding: 30px 15px;
+    width: 1000px;
+    height: 600px;
+	display: flex;
+	border: solid 1px black;
+	margin: auto;
+    justify-content: space-between;
+    text-align: left;
+
 }
 
 .editor {
-    display: inline-block;
-  width: 470px;
+	display: inline-block;
+	width: 460px;
+	height: 500px;
 }
-
 textarea {
-  width: 460px;
-  height: 400px;
+	width: 100%;
+	height: 400px;
 }
 /** {
-  box-sizing:border-box;
+	box-sizing:border-box;
 }*/
- .Result {
-     display: inline-block;
-
-  top: 30px;
-  left: 500px;
-  width: 470px;
-  text-align: left;
-  font-size: large;
+.view {
+	display: inline-block;
+	width: 460px;
+	height: 500px;
+	text-align: left;
+	font-size: large;
 }
 
 
 
 /*@media screen and (max-width: 900px){*/
-  /*.container{
-    width: auto;
-  }*/
+	/*.container{
+		width: auto;
+	}*/
 
-  /*#Editor, #result {
-    display:block;
-    width:auto;
+	/*#Editor, #result {
+		display:block;
+		width:auto;
 
-  }
+	}
 }*/
