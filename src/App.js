@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import marked from 'marked'
+import marked from 'marked';
+import {ModalInstance} from './markdownLibrary';
 // import markDownLibrary from './markdownLibrary.js'
 
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
           <Editor input={this.state.input} onInputChange={this.onInputChange} />
           <View input={this.state.input} />
         </div>
-        <Result />
+        {/* <Result /> */}
         <Footer />
       </div>
     )
@@ -42,11 +43,26 @@ function Header (){
 }
 
 class Editor extends Component {
+    constructor (props) {
+        super (props)
+        this.state = {
+            showMarkdown: false
+        }
+    }
+    showMarkdown = () => {
+        this.setState({showMarkdown:true})
+    }
+    hideMarkdown = () => {
+        this.setState({showMarkdown:false})
+    }
   render() {
     return (
       <section className="editor">
           <h3>What's on your mind?</h3>
         <textarea value={this.props.input} onChange={this.props.onInputChange}/>
+        <a href='#' onClick={this.showMarkdown}>Markdown Dictionary</a>
+        {this.state.showMarkdown? <ModalJSLibrary hideMarkdown={this.hideMarkdown} /> : ''}
+
     </section>
     )
   }
