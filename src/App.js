@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import marked from 'marked';
 import {ModalJSLibrary, Example} from './markdownLibrary';
-// import markDownLibrary from './markdownLibrary.js'
 
 class App extends Component {
   constructor(props){
@@ -64,13 +63,11 @@ class Editor extends Component {
       <section className="editor">
           <h3>What's on your mind?</h3>
         <textarea value={this.props.input} onChange={this.props.onInputChange}/>
-        {/* <a href='#' onClick={this.showMarkdown}>Markdown Dictionary</a> */}
-        {/* {this.state.showMarkdown? <ModalJSLibrary hideMarkdown={this.hideMarkdown} /> : ''} */}
-        {/* <ModalJSLibrary */}
-            {/* // showMarkdownModal={showMarkdownModal} */}
-            {/* show={this.state.showMarkdownModal} hideMarkdown={this.hideMarkdown} */}
-        {/* /> */}
-        <Example />
+        <a href='#' onClick={this.showMarkdown}>Markdown Dictionary</a>
+        <ModalJSLibrary
+            showMarkdownModal={showMarkdownModal}
+            show={this.state.showMarkdownModal} hideMarkdown={this.hideMarkdown}
+        />
 
     </section>
     )
